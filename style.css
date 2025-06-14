@@ -86,6 +86,7 @@ header {
 
     @media screen and (max-width: 768px) {
         height: auto;
+        padding: 10px 0;
 
         nav {
             .nav-wrapper {
