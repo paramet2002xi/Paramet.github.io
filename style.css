@@ -1,0 +1,357 @@
+:root{
+    --red: #C8102E;
+    --white: #ffffff;
+    --black: #000000;
+    --text: #D6D6D6;
+    --text-footer: #393939;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.container {
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+.hamburger {
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+/*--------------------------------------------------------- Header Section -----------------------------------------------------------*/
+header {
+    background-color: #0d0d0d;
+
+    nav {
+        margin: 0 30px;
+
+        .nav-wrapper {
+            position: relative;
+            height: 96px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .logo {
+                img {
+                    height: 100%;
+                    align-items: center;
+                }
+            }
+
+            .menu.show {
+                display: flex;
+            }
+
+            .menu {
+                display: flex;
+                list-style: none;
+
+                .active {
+                    color: var(--red);
+                    font-weight: 600;
+                }
+
+                li {
+                    margin-left: 60px;
+
+                    a {
+                        color: var(--white);
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .hamburger {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding: 10px 0;
+
+        nav {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: start;
+                margin: 40px 0;
+                height: auto;
+
+                .menu {
+                    flex-direction: column;
+                    display: none;
+
+                    li {
+                        margin-left: 0;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .profile-title {
+        .profile-title-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 40px 0;
+
+            .profile-title-box{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+
+                .profile-info {
+                    h1 {
+                        color: var(--white);
+                        font-size: clamp(16px, 10vw, 64px);
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+
+                    .red {
+                        color: var(--red);
+                        }
+
+                    .nickname {
+                        font-size: clamp(8px, 10vw, 24px);
+                        font-weight: bold;
+                    }
+
+                    p {
+                        color: var(--text);
+                        font-size: clamp(14px, 10vw, 32px);
+                        font-weight: 400;
+                        margin-top: 40px;
+                    }
+                }
+
+                .profile-img {
+
+                    img {
+                        width: 520px;
+                        height: 520px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+
+        .profile-title-wrapper {
+            height: auto;
+
+            .profile-title-box {
+                flex-direction: column;
+
+                .profile-img {
+                    img {
+                        padding: 40px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------- Portfolio Section -----------------------------------------------------------*/
+
+.portfolio {
+    overflow: hidden;
+    background-color: #0d0d0d;
+
+    .portfolio-title {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        align-items: center;
+
+        h2 {
+            color: var(--white);
+            font-size: clamp(16px, 10vw, 36px);
+            font-weight: bold;
+            text-transform: uppercase;
+
+            .number-title01 {
+                color: var(--red);
+            }
+        }
+
+        p {
+            color: var(--text);
+            font-size: clamp(9px, 10vw, 18px);
+            font-weight: 400;
+        }
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        color: var(--white);
+        gap: 60px;
+
+        .portfolio-item {
+
+            img {
+                width: 100%;
+            }
+
+            h3 {
+                font-size: clamp(9px, 10vw, 18px);
+                font-weight: 600;
+                margin-top: 24px;
+                text-align: center;
+            }
+        }
+    }
+
+    .portfolio-btn {
+        display: flex;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+            font-size: clamp(8px, 10vw, 16px);
+            background-color: var(--white);
+            color: var(--black);
+            max-width: 120px;
+            width: 100%;        
+            height: 44px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            text-decoration: none;
+            border-radius: 24px;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding: 40px 0;         
+    }
+}
+
+/*--------------------------------------------------------- Footer Section -----------------------------------------------------------*/
+
+footer {
+    height: 310px;
+    background-color: var(--white);
+
+    .footer-wrapper {
+        height: 310px;
+        display: flex;
+        align-items: center;
+
+        .footer-grid {
+            width: 100%;
+            display: flex;
+            color: var(--black);
+            align-items: center;
+            justify-content: space-between;
+
+            .footer-grid-items {
+                margin: 16px;
+                height: 200px;
+                
+                img {
+                    height: auto;
+                    margin-bottom: 30px;
+                }
+
+                h5 {
+                    font-size: clamp(9px, 10vw, 18px);
+                    margin-bottom: 30px;
+                    font-size: bold;
+                }
+
+                p {
+                    color: var(--text-footer);
+                }
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        margin-top: 30px;
+
+                        a {
+                            text-decoration: none;
+                            color: var(--text-footer);
+                        }
+                    }
+                }
+
+                &:nth-child(1) {
+                    max-width: 245px;
+                    height: 190px;
+
+                    ul {
+                        display: flex;
+
+                        li {
+                            margin-right: 32px;
+                            
+                            .active {
+                                color: var(--red);
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    max-width: 245px;
+                    height:auto;
+
+                    p {
+                        margin-top: 16px;
+                    }
+
+                    ul {
+                        display: flex;
+
+                        li {
+                            margin-right: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding: 40px 0;
+
+        .footer-wrapper {
+            height: auto;
+
+            .footer-grid {
+                flex-direction: column;
+
+            }
+        }
+    }
+}
