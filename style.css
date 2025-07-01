@@ -28,7 +28,7 @@
 
 /*--------------------------------------------------------- Header Section -----------------------------------------------------------*/
 header {
-    background-color: #0d0d0d;
+    background-color: #161616;
 
     nav {
         margin: 0 30px;
@@ -176,7 +176,7 @@ header {
 
 .portfolio {
     overflow: hidden;
-    background-color: #0d0d0d;
+    background-color: #161616;
 
     .portfolio-title {
         margin-top: 40px;
